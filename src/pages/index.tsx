@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 
-import { SignInButton } from '../components/SignInButton.tsx';
+import SubscribeButton from '../components/SubscribeButton';
 import { stripe } from '../services/stripe';
 import styles from './home.module.scss';
 
@@ -30,7 +30,7 @@ export default function Home({ product }: HomeProps) {
             <span>for {product.amount} month</span>
           </p>
 
-          <SignInButton priceId={product.priceId} />
+          <SubscribeButton />
         </section>
 
         <img src="/images/girl.svg" alt="girl coding" />
