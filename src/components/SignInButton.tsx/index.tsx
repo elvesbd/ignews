@@ -3,7 +3,11 @@ import { FiX } from 'react-icons/fi';
 
 import styles from './styles.module.scss';
 
-export function SignInButton() {
+interface SubscribeButtonProps {
+  priceId: string;
+}
+
+export function SignInButton({ priceId }: SubscribeButtonProps) {
   const isUserLoggedIn = true;
 
   return isUserLoggedIn ? (
