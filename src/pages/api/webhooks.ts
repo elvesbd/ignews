@@ -60,7 +60,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       } catch (err) {
         return res.json({ error: 'Webhook handler failed' });
       }
-      console.log(event);
     }
 
     res.json({ received: true });
