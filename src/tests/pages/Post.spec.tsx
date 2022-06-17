@@ -15,7 +15,7 @@ const post = {
 jest.mock('../../services/prismic');
 jest.mock('next-auth/client');
 
-describe('Post page', () => {
+describe('Post', () => {
   it('renders correctly', () => {
     render(<Post post={post} />);
 

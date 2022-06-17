@@ -20,11 +20,19 @@ jest.mock('next-auth/client', () => {
   };
 });
 
-describe('Header component', () => {
+describe('Header', () => {
   it('renders correctly', () => {
     render(<Header />);
 
+    screen.logTestingPlaygroundURL();
+
     expect(screen.getByText('Home')).toBeInTheDocument();
     expect(screen.getByText('Posts')).toBeInTheDocument();
+
+    expect(
+      screen.getByRole('button', {
+        name: /sign in with github/i,
+      })
+    );
   });
 });

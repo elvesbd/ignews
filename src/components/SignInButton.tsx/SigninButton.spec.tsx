@@ -7,7 +7,7 @@ import { SignInButton } from '.';
 jest.mock('next-auth/client');
 const useSessionMocked = mocked(useSession);
 
-describe('SigninButton component', () => {
+describe('SigninButton', () => {
   it('renders correctly when user is not logged in', () => {
     useSessionMocked.mockReturnValueOnce([null, false]);
 

@@ -20,7 +20,7 @@ jest.mock('next/router');
 const useSessionMocked = mocked(useSession);
 const useRouterMocked = mocked(useRouter);
 
-describe('Post preview page', () => {
+describe('PostPreview', () => {
   it('renders correctly', () => {
     useSessionMocked.mockReturnValueOnce([null, false]);
 
